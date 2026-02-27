@@ -10,7 +10,14 @@
 </template>
 
 <script setup>
-        import { defineProps } from 'vue';
-        const email = 'vue@vue.org';
-        const props = defineProps(["name", "phone", "ownerName"]);
+        const props = defineProps({
+                name: { type: String, required: true },
+                phone: String,
+                ownerName: String,
+                email: {
+                        type: String,
+                        required: true,
+                        default: 'N/A'
+                }
+        });
 </script>
