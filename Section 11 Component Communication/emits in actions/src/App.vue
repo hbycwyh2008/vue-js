@@ -13,7 +13,7 @@
             :ownerName="contactsOwner"
             :email="contact.email"
             :isFavorite="contact.isFavorite"
-            @update-favorite="contact.isFavorite = !contact.isFavorite"
+            @update-favorite="contact.isFavorite = onUpdated($event)"
           />
         </div>
       </div>
@@ -25,7 +25,7 @@
 
 
 <script setup>
-import { ref,reactive } from 'vue';
+import { ref,reactive, onUpdated } from 'vue';
 import Contact from './components/Contact.vue';
 
 const msg = 'Hello Vue';
@@ -47,4 +47,8 @@ const contacts = reactive([
     isFavorite: false
   }
 ]);
+
+function onUpdated(isFavoriteFromChildComponent) {
+  return !isFavoriteFromChildComponent;
+}
 </script>
