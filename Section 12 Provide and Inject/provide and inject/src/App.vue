@@ -5,7 +5,7 @@
     <div class="row align-items-center">
       <div class="row text-white p-2 mb-2">
         <div class="col-6">
-          Owner Name: <input v-model="ownerName">
+          Owner Name: <input v-model="contactsOwner">
         </div>
         <div class="col-6">
           Max Lucky Number: <input  v-model="maxNumber">
@@ -32,12 +32,9 @@
 
 
 <script setup>
-import { ref, reactive,provide } from 'vue';
+import { ref, reactive, provide } from 'vue';
 import Contact from './components/Contact.vue';
 import AddContact from './components/AddContact.vue';
-
-prompt("maxLuckyNumber", "maxNumber");
-
 const maxNumber = ref(100);
 const msg = 'Hello Vue';
 const contactsOwner = ref("Vue");
@@ -58,6 +55,8 @@ const contacts = reactive([
     isFavorite: false
   }
 ]);
+
+provide("maxLuckyNumber", maxNumber);
 
 function onAddContact(contact){
   contact.ownerName = contactsOwner.value;
