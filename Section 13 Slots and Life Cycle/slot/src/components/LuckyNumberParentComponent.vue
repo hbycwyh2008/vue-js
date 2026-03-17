@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-black text pt-3" :style="{height: '100vh'}">
+    <div class="container bg-white text pt-3" :style="{height: '100vh'}">
       <h1 class="text-center text-success">Learn Slots</h1>
   
       <div class="row align-items-center">
