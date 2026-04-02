@@ -1,0 +1,25 @@
+{
+  "destination": [
+    {
+      "id": 1,
+      "name": "Bangkok",
+      "days": 7,
+      "funFact": "Bangkok is known for its vibrant street life and cultural landmarks.",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "name": "Paris",
+      "days": 5,
+      "funFact": "Paris is home to the iconic Eiffel Tower and world-class art museums.",
+      "price": 1500
+    },
+    {
+      "id": 3,
+      "name": "Tokyo",
+      "days": 10,
+      "funFact": "Tokyo is a bustling metropolis that seamlessly blends tradition and modernity.",
+      "price": 2000
+    }
+  ]
+}
